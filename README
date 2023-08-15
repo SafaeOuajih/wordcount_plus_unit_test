@@ -1,0 +1,55 @@
+Wordcount parses an input dictionary file as follows:
+
+	- A line with a single word defines a word to be counted in the input stream.
+	- Empty lines and lines starting with # are ignored.
+
+In the following cases, the program will stop with an error:
+
+	- If a line of the dictionary has more than one word.
+
+	- If a word appears more than once in the dictionary.
+
+Wordcount counts the number of occurrence of any word in the dictfile that appears in the input stream
+and also count the total number of words.
+
+'char **dictfile' holds the words in the dictfile
+'int *count' holds the occurrence of every word in the dictfile
+'int current_dictfile_size' keeps track of 'char **dictfile' length
+
+
+LIMITATIONS:
+
+1- The dictfile should only have MAX-INT words.
+2- Each word's length in dictfile must be below MAX_WORD_LEN
+	#define MAX_WORD_LENGTH 50
+3- A line's length in the dictfile must not be above MAX_LINE_LENGTH
+	#define MAX_LINE_LENGTH 1024
+
+IMPOVEMENT:
+1- Better memory management
+2- Use of cache
+3- Realloc multiple blocks
+4- Reduce complexity
+
+To build:
+	$ make
+
+Testing using text files:
+	$ cd output
+	$ ./wordcount <dictfile> <textfile1> <textfile2>
+
+Testing using standard input:
+	$ cd output
+	$ ./wordcount <dictfile>
+	word1
+	word2
+	...
+	TO QUIT ENTER THE WORD <END>
+
+RUN unit tests:
+	$ cd output
+	$ ./test
+
+RUN example test:
+	$ cd test
+	$ ./go

@@ -1,0 +1,12 @@
+echo 	Start testing
+echo Test with dictfile test_dictfile1.txt
+echo "#####################################"
+./../output/wordcount test_dictfile1.txt test_textfile1.txt test_textfile2.txt
+
+
+echo 
+
+
+echo Test with dictfile test_dictfile2.txt
+echo "#####################################"
+./../output/wordcount test_dictfile2.txt test_textfile1.txt test_textfile2.txt
