@@ -51,5 +51,6 @@ RUN unit tests:
 	$ ./test
 
 RUN example test:
+	$ make
 	$ cd test
 	$ ./go
